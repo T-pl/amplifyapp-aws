@@ -1,0 +1,14 @@
+{
+  "resourceName": "tiago",
+  "policyUUID": "7ddb0de2",
+  "bucketName": "amplifyappaws49211f276559447d96d2aebcc8b9b0b6",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
