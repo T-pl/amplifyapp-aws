@@ -4,7 +4,8 @@ import { API, Storage } from 'aws-amplify';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react-v1';
 import { listNotes } from './graphql/queries';
 import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
-
+import { Button } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 const initialFormState = { name: '', description: '' }
 
 function App() {
@@ -70,14 +71,14 @@ function App() {
         type="file"
         onChange={onChange}
       />
-      <button onClick={createNote}>Create Note</button>
+      <Button onClick={createNote}>Create Note</Button>
       <div style={{ marginBottom: 30 }}>
         {
           notes.map(note => (
             <div key={note.id || note.name}>
               <h2>{note.name}</h2>
               <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
+              <Button onClick={() => deleteNote(note)}>Delete note</Button>
               {
                 note.image && <img alt='upload imagens' src={note.image} style={{ width: 400 }} />
               }
